@@ -1,0 +1,148 @@
+body {
+	font-family: Arial, sans-serif;
+	width: 100%;
+}
+
+              \\this is the top bar of the site
+.top{
+	display: flex;
+	display: inline-block;
+			margin-top: 3px;
+
+
+}  
+ .top i{
+		font-size: 20px;
+		color: black;
+		margin-top: 3px;}
+.top1{
+		margin-top: 3px;
+
+	margin-left: 4px;
+	display: flex;
+	gap: 20px;
+
+
+}
+
+.top2{
+   margin-top: 3px;
+	margin-left: 70%;
+	display: flex;
+	gap: 10px;
+	color: black;
+}
+.top2 a {
+	margin-top: 3px;
+	color: black;
+	text-decoration: none;
+	display: flex;
+	gap: 10px;
+	color: black;
+}
+
+\\nav bar details
+.btn btn-success{
+	margin-left: 40px;
+}
+
+/* Responsive: Show .top as block and stack contents vertically on small screens */
+@media (max-width: 768px) {
+    .top {
+        display: none !important;
+        
+    }
+    }
+
+/* Banner Styles */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: #e3f6fc;
+}
+
+.banner-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 1;
+    transition: opacity 0.7s;
+}
+
+.banner-overlay {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,128,0,0.5) 0%, rgba(255,0,0,0.3) 50%, rgba(0,191,255,0.5) 100%);
+    z-index: 2;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.banner-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,128,0,0.7);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 4;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.2s;
+}
+#bannerPrev { left: 20px; }
+#bannerNext { right: 20px; }
+.banner-arrow:hover {
+    background: rgba(255,0,0,0.7);
+}
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+    .banner-container {
+        height: 220px;
+    }
+    .banner-content h1 {
+        font-size: 1.3rem;
+    }
+    .banner-content p {
+        font-size: 0.9rem;
+    }
+    .banner-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+    }
+}
