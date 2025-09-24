@@ -49,3 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
         startBannerAutoSlide();
     };
 });
+
+
+//modal code
+function showPaymentDetails(method) {
+  const details = {
+    airtel: `<div class="alert alert-success mb-0"><strong>Airtel Money:</strong> Send to <b>+256703204351</b></div>`,
+    mtn: `<div class="alert alert-warning mb-0"><strong>MTN Mobile Money:</strong> Send to <b>+256784512521</b></div>`,
+    bank: `<div class="alert alert-primary mb-0"><strong>Bank Transfer:</strong> Account No. <b>4325637345</b></div>`
+  };
+  document.getElementById('paymentDetails').style.display = 'block';
+  document.getElementById('paymentDetails').innerHTML = details[method];
+}
